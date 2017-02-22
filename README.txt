@@ -8,7 +8,7 @@ Assigned specs:
 -A way to program and debug the ATmega328p
 -Input is going to be a 16V battery.
 
-Versions 1,2,3,3.1,3.2 were developed by Koltin Kosik-Harvey. Anyone on the ECOCAR team has
+Versions 1,2,3,3.1,3.2,3.3,3.4 were developed by Koltin Kosik-Harvey. Anyone on the ECOCAR team has
 rights to use these version files as they wish.
 
 Notes:
@@ -27,6 +27,9 @@ V4   - If V4 were to be created, it would use a smaller MCU. The smaller MCU wel
        screen, and have it all fit on the same board layout. 
      - Another thought is to have stacked RJ11 Ports or to just use 2 ports, however the 
        3 ports is rather handy. Maybe 2 double stacked RJ11s? 
+     - For ill also be looking into Boost Buck so we can use any kind of power source. 
+       The 12 volt regulator is host to a lot of resistive loss, this is an issue with 3.4
+       Stretch goal for the boost buck would be to make it 120V AC adaptable.
 
 - More Details in the README in the folder of the specific version. 
 
