@@ -40,4 +40,5 @@ Their datasheets are a google away online.
 the 12V regulator (MIC2940A-12WT, V3.1) is using the Device, "7805TCV(78*)". This is done 
 to get the TO-220 package.
 
-
+--> In the comming months, this repo is going to be purged with only the necessary files. 
+    All that would be left would be the current version board files(V3.4) and eagle libraries. 
