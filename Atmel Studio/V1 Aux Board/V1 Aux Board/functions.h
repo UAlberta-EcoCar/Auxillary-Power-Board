@@ -2,6 +2,8 @@
 #define FUNCTIONS_H_
 
 #define F_CPU 2000000UL //Frequency for delay.h
+#define TWOE16 65535
+
 #include <avr/io.h>     // I/O functions for AVR CPU
 #include <util/delay.h> // Enables delay functions
 #include <avr/power.h>  // Provides functions to reduce power usage
@@ -19,10 +21,10 @@ double getCurrent(void); //calls ADCRead and generates current out utilization o
 
 double getVoltage(void); //calls ADCRead and generates voltage of the battery input
 
-struct ADCOut ADCRead(uint8_t pin);  //Read the ADC outputing 0-1024, where 1024 is 5V
-									 //Note this is using the ADCOut structure that holds 2, 8bit numbers.
+uint16_t ADCRead(uint8_t pin);  //Read the ADC outputing 0-1024, where 1024 is 5V
+						        //Note this is using the ADCOut structure that holds 2, 8bit numbers.
 
-void writeEEPROM(uint16_t address, double data); //Store power output to read later.
+void writeEEPROM(uint16_t * addr, double data); //Store power output to read later.
 
 uint16_t byteCombine(struct ADCOut input);  //Combines 2, 8-bit numbers into a 10-bit (For ADC Out)
 

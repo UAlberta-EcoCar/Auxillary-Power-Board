@@ -23,9 +23,17 @@ uint16_t byteCombine(struct ADCOut input){ //The ADCOut struct holds these 2 8bi
 
 //This function is used to store the power output into the 
 //EEPROM of the 328p for later inspection. 
-void writeEEPROM(uint16_t address, uint16_t power){
+void writeEEPROM(uint16_t * addr, double power){
 	
-	eeprom_write_word( address, power);
+	if ( power > TWOE16 )    //if power is larger than 2^16
+	{						 //just make it 0xFFFF
+		power = TWOE16;
+	}
+	uint16_t power_word;
+	power = round(power);
+	power_word = (uint16_t) power;
+		
+	eeprom_write_word(addr, power_word);
 
 }
 
@@ -33,35 +41,46 @@ void writeEEPROM(uint16_t address, uint16_t power){
 //This is how we get the current and the voltage from the 
 //328p. The range is 0-1024 and the output is the ADCOut
 //structure that contains 2, 8-bit numbers.
-struct ADCOut ADCRead(uint8_t pin){
+uint16_t ADCRead(uint8_t pin){
 
-	struct ADCOut input;
+	struct ADCOut input[16]; //We're going to sample and average from 16 readings. 
+
 	PRR &= 0b11111110; //Enable ADC Power
 	ADCSRB &= 0x00; //Auto Trigger = Free Running mode
-	ADCSRA |= 0b10100111; // ADC Enable; Auto Trigger; Freq/128
-	ADMUX &= 0b01000000; //Set reference, AVcc
+	ADCSRA |= (1 << ADEN) | (1 << ADATE) | (1 << ADIE) | ( 1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); // ADC Enable; Auto Trigger;
+	ADMUX |= (1 << REFS0); //Set reference, AVcc														  // Interupt Enable; Freq/128 
 	ADMUX |= pin; //Set ADC pin
-	ADCSRA |= 0b01000000; //Start Conversation
 
-	while( ~(ADCSRA & 0b00010000) ); //Wait till conversation complete
+	uint8_t i;
+	for (i = 0x0; i < 16 ; i++){
+	
+		ADCSRA |= (1 << ADSC); //Start Conversation, 
 
-	input.leftbyte = ADCL;  //Read output
-	input.rightbyte = ADCH; //Once read the output ADCL/ADCH
-							//Resets
+		while( ~(ADCSRA & (1 << ADIF)) ); //Wait till conversation complete
 
-	return input;
+		input[i].leftbyte = ADCL;  //Read output
+		input[i].rightbyte = ADCH; //Once we read the output ADCL/ADCH
+						    	//Resets
+	}
+
+	uint32_t sum = 0x0;
+	for (i = 0x0; i < 15; i++)
+	{
+		sum = ((uint32_t) byteCombine(input[i])) + ( (uint32_t) byteCombine(input[i+1]) );  // add up all the readings
+	}
+
+	uint16_t average_reading = (uint16_t) (sum / 16);  //Find the average of the readings and return the value
+	return average_reading;
 }
 
 //gets the output voltage in milliVolts
 double getVoltage(void){
 	
 	double voltage; //initialize
-	struct ADCOut reading;  // a structure with 2, 8bit numbers 
-	reading = ADCRead(0x01);  // Voltage input is on ADC1
-
-	voltage = (double) byteCombine(reading); //Combine the 2, 8bit numbers
-											 //then cast to a double
-	voltage = voltage * 24.4141063  // Convert 0-1024 to an input voltage 0-5 then multiply by 5 since
+												
+	voltage = (double) ADCRead((uint8_t) 0x1); // Voltage input is on ADC1
+											 
+	voltage = voltage * 24.4141;  // Convert 0-1024 to an input voltage 0-5 then multiply by 5 since
 							        //OPAMP multiplies Battery input voltage by 0.2 or 1/5
 						            //This result is the Voltage in mV of the supply      (5/1024)*(5)*1000 = 24.4140625
 	return voltage;
@@ -71,11 +90,10 @@ double getVoltage(void){
 double getCurrent(void){
 	
 	double current;
-	struct ADCOut reading;
-	reading = ADCRead(0x00);  //Current reading is on ADC0
 
-	current = (double) byteCombine(reading);
-	current = current * 2.441406;    // Convert 0-1024 to an input voltage 0-5
+	current = (double) ADCRead((uint8_t) 0x0);  //Current reading is on ADC0
+
+	current = current * 2.4414;      // Convert 0-1024 to an input voltage 0-5
 							         // Convert voltage 0-5, to the input current 
 							         // across shunt to 0-2.25A, then multiply by 1000 (5/1024)*(2.25/5)*1000 = 2.44140625
 	return current;
@@ -87,7 +105,8 @@ double getPower(void){
 	
 	double power;
 	
-	power = ( getVoltage() * getCurrent() ) / 1000000; //outputs in milliwatts. 
-	
+	power = getVoltage() * getCurrent(); //outputs in milliwatts. 
+	power = power / 1000000;
+
 	return power;
 }
