@@ -8,7 +8,7 @@ Assigned specs:
 -A way to program and debug the ATmega328p
 -Input is going to be a 16V battery.
 
-Versions 1,2,3,3.1,3.2,3.3,3.4 were developed by Koltin Kosik-Harvey. Anyone on the ECOCAR team has
+Versions 1,2,3,3.1,3.2,3.3,3.4,4.0 were developed by Koltin Kosik-Harvey. Anyone on the ECOCAR team has
 rights to use these version files as they wish.
 
 Notes:
@@ -19,17 +19,16 @@ V3.1 - Removed an inefficiency. Effectively doubling current output by shorting 
        5V regulator input to the battery. See README in V3.1 folder. 
 V3.2 - Replaced diode reverse current protection with 2 pMOS in parallel.
 V3.3 - Added a way to measure the voltage of the battery.
-V3.4 - Connected op-amps to a 12V source to make them more linear 
+V3.4 - Connected op-amps to a 12V source to make them more linear
 V4   - If V4 were to be created, it would use a smaller MCU. The smaller MCU well allow for a 
-       smaller board and allow for extras like an real-time LED power output display.
-       Prospect MCUs include the ATTiny13 or the ATTiny2313A. The ATTiny2313A will need to be
-       a surface mount. This way we'll be able to read power usage in real time with an LCD
-       screen, and have it all fit on the same board layout. 
+       smaller board and allow for extras like an real-time OLED power output display with historigram.
+       Prospect MCU is the 328p. Prospect display is the Kuman 0.96 Inch Blue IIC 128x64. 
+       The MCU will be a surface mount.
      - Another thought is to have stacked RJ11 Ports or to just use 2 ports, however the 
        3 ports is rather handy. Maybe 2 double stacked RJ11s? 
-     - For ill also be looking into Boost Buck so we can use any kind of power source. 
-       The 12 volt regulator is host to a lot of resistive loss, this is an issue with 3.4
-       Stretch goal for the boost buck would be to make it 120V AC adaptable.
+     - For 12V regulation also be looking into Boost Buck so we can use any kind of power source. 
+       The 12V regulator is host to a lot of resistive loss, this is an issue with 3.4
+     - Need the op-amps connected to a +/- 12/15 V supply for linearity in the region 0-5V.
 
 - More Details in the README in the folder of the specific version. 
 
