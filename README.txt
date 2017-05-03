@@ -4,9 +4,9 @@ Assigned specs:
 -a couple of output rj11 ports.
 -5V @ 1A out
 -12 @ 1A out
--Data log the power usage onto a ATmega328p's EEPROM.
+-Data log the power usage onto an LCD.
 -A way to program and debug the ATmega328p
--Input is going to be a 16V battery.
+-Input is going to be a 16V battery that can range 7-18V.
 
 Versions 1,2,3,3.1,3.2,3.3,3.4,4.0 were developed by Koltin Kosik-Harvey. Anyone on the ECOCAR team has
 rights to use these version files as they wish.
@@ -26,7 +26,7 @@ V4   - If V4 were to be created, it would use a smaller MCU. The smaller MCU wel
        The MCU will be a surface mount.
      - Another thought is to have stacked RJ11 Ports or to just use 2 ports, however the 
        3 ports is rather handy. Maybe 2 double stacked RJ11s? 
-     - For 12V regulation also be looking into Boost Buck so we can use any kind of power source. 
+     - For 12V regulation also be looking into SEPTIC regulation so we can use a voltage near Vin. 
        The 12V regulator is host to a lot of resistive loss, this is an issue with 3.4
      - Need the op-amps connected to a +/- 12/15 V supply for linearity in the region 0-5V.
 
