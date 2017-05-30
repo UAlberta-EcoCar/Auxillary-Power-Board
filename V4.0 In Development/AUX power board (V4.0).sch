@@ -24134,7 +24134,6 @@ ZXMP10A17E6</description>
 <part name="R20" library="resistor" deviceset="R-US_" device="R2512" value="400 (3W)"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="1M" library="rcl" deviceset="R-US_" device="R0805" value="1820k"/>
-<part name="1M1" library="rcl" deviceset="R-US_" device="R0805" value="1820k"/>
 </parts>
 <sheets>
 <sheet>
@@ -24209,9 +24208,13 @@ for inductor</text>
 <text x="109.728" y="232.41" size="1.27" layer="91">Coupled Inductor
 10uH per coil</text>
 <text x="160.782" y="156.718" size="1.27" layer="91">10uH</text>
-<text x="93.98" y="30.48" size="1.778" layer="91">Reverse Polarity Protection.
+<text x="101.6" y="25.4" size="1.778" layer="91">Overvoltage Protection
 PSMN1R4-40YLDX nMOS</text>
 <text x="43.18" y="0" size="1.778" layer="91">blown fuse ind.</text>
+<text x="66.04" y="27.94" size="1.778" layer="91">Reverse polarity
+indicator</text>
+<text x="66.04" y="-25.4" size="1.778" layer="91">Reverse Polarity Protection
+PSMN1R4-40YLDX nMOS</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="/1" x="12.7" y="-20.32"/>
@@ -24338,7 +24341,6 @@ PSMN1R4-40YLDX nMOS</text>
 <instance part="R20" gate="G$1" x="81.28" y="7.62" rot="R90"/>
 <instance part="GND11" gate="1" x="91.44" y="-12.7"/>
 <instance part="1M" gate="G$1" x="86.36" y="-2.54" rot="R270"/>
-<instance part="1M1" gate="G$1" x="33.02" y="7.62" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -25386,9 +25388,8 @@ PSMN1R4-40YLDX nMOS</text>
 <pinref part="U$7" gate="G$1" pin="P$1"/>
 <wire x1="27.94" y1="-2.54" x2="30.48" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="-2.54" x2="30.48" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="-10.16" x2="38.1" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
-<wire x1="38.1" y1="-10.16" x2="63.5" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="-10.16" x2="63.5" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-5.08" x2="63.5" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="63.5" y="-10.16"/>
 <wire x1="63.5" y1="-10.16" x2="63.5" y2="-17.78" width="0.1524" layer="91"/>
@@ -25404,9 +25405,10 @@ PSMN1R4-40YLDX nMOS</text>
 <label x="116.84" y="-7.62" size="1.778" layer="95"/>
 <pinref part="PSMN1R4-40TLDX1" gate="G$1" pin="D"/>
 <wire x1="63.5" y1="-10.16" x2="71.12" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="1M1" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="2.54" x2="38.1" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="38.1" y="-10.16"/>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="-2.54" x2="73.66" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-10.16" x2="68.58" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="-10.16" x2="73.66" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -25460,9 +25462,6 @@ PSMN1R4-40YLDX nMOS</text>
 <pinref part="1M" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="5.08" x2="86.36" y2="2.54" width="0.1524" layer="91"/>
 <junction x="86.36" y="5.08"/>
-<pinref part="1M1" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="12.7" x2="45.72" y2="12.7" width="0.1524" layer="91"/>
-<junction x="45.72" y="12.7"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -25514,9 +25513,6 @@ PSMN1R4-40YLDX nMOS</text>
 <wire x1="76.2" y1="-5.08" x2="78.74" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="2.54" x2="81.28" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="R20" gate="G$1" pin="1"/>
-<pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="-2.54" x2="73.66" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="-5.08" x2="76.2" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="76.2" y="-5.08"/>
 <pinref part="TN2540-600G-TR" gate="G$1" pin="C"/>
 <wire x1="76.2" y1="-5.08" x2="81.28" y2="-5.08" width="0.1524" layer="91"/>
