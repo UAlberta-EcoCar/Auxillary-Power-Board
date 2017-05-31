@@ -16,16 +16,16 @@ Completed:
 	Only have 2 outputs. One to FCC board (if needed) and to Aux Board. Still keep 
 	a header for testing.
 
+	I inverted the RJ11 Port
+
+	Implemented Overvoltage protection
+
 Planned:
 	i2c 0.96" 128x64 display (Possibly a no to data logging)
 
 	Use existing Heat Sink and place on the bottom of the board
 
-	Invert the RJ11 device package
-
 	Add holes to the outside of the board (ease of mounting)
-
-	Overvoltage protection. 
 
 	Add a standardized fuse holder
 
