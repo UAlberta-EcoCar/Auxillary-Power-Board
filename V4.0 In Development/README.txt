@@ -19,15 +19,19 @@ Completed:
 	I inverted the RJ11 Port
 
 	Implemented Overvoltage protection
+	
+	Implemented reverse voltage protection
+	
+	Add a standardized fuse holder
 
 Planned:
-	i2c 0.96" 128x64 display (Possibly a no to data logging)
+	i2c 0.96" 128x64 display (Possibly a no to data logging, favoring real-time power measurements)
 
 	Use existing Heat Sink and place on the bottom of the board
 
 	Add holes to the outside of the board (ease of mounting)
 
-	Add a standardized fuse holder
+
 
 
 
