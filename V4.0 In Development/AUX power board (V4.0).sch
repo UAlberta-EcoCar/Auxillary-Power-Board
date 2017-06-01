@@ -24753,12 +24753,17 @@ Source: http://www.irf.com/product-info/datasheets/data/irf3704.pdf</description
 <part name="U$10" library="5555140-6 RJ11" deviceset="5555140-6" device=""/>
 <part name="AL5809-20S1-7_1" library="semicon-smd-ipc" deviceset="D-" device="SOD123" value="20mA"/>
 <part name="AL5809-20S1-7_2" library="semicon-smd-ipc" deviceset="D-" device="SOD123" value="20mA"/>
-<part name="1N5356BRLG_2" library="diode" deviceset="ZENER-DIODE" device="DO41Z10" value="19V"/>
+<part name="1N5354BRLG" library="diode" deviceset="ZENER-DIODE" device="DO41Z10" value="17V"/>
 <part name="BT152B-400R" library="transistor-power" deviceset="IRF3704" device="S"/>
 <part name="AL5809-20S1-7_4" library="semicon-smd-ipc" deviceset="D-" device="SOD123" value="20mA"/>
 <part name="AL5809-20S1-7_5" library="semicon-smd-ipc" deviceset="D-" device="SOD123" value="20mA"/>
 <part name="C35" library="rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R2512" value="400 (3W)"/>
+<part name="PSMN1R4-40TLDX2" library="PSMN1R4-40YLDX" deviceset="MOSFET-NCHANNEL" device="FDS6630A"/>
+<part name="LED3" library="E-P-008-R1.2" deviceset="LED" device="SML1206" value="RED"/>
+<part name="LED4" library="E-P-008-R1.2" deviceset="LED" device="SML1206" value="RED"/>
+<part name="MLZ2012DR10DT001" library="resistor" deviceset="L-US" device="L2012C" value="100nH"/>
+<part name="MLZ2012DR10DT002" library="resistor" deviceset="L-US" device="L2012C" value="100nH"/>
 </parts>
 <sheets>
 <sheet>
@@ -24834,7 +24839,7 @@ for inductor</text>
 <text x="109.728" y="232.41" size="1.27" layer="91">Coupled Inductor
 10uH per coil</text>
 <text x="160.782" y="156.718" size="1.27" layer="91">10uH</text>
-<text x="91.44" y="22.86" size="1.778" layer="91">Overvoltage Protection
+<text x="116.84" y="30.48" size="1.778" layer="91">Overvoltage Protection
 BT152B-400R SCR</text>
 <text x="43.18" y="0" size="1.778" layer="91">blown fuse ind.</text>
 <text x="71.12" y="22.86" size="1.778" layer="91">Reverse polarity
@@ -24843,8 +24848,14 @@ indicator</text>
 PSMN1R4-40YLDX nMOS</text>
 <text x="353.06" y="33.02" size="1.778" layer="91">For i2c LCD</text>
 <text x="38.1" y="-7.62" size="1.778" layer="91">Using 20mA LED driver</text>
-<text x="106.68" y="2.54" size="1.27" layer="91">This is an SCR
+<text x="121.92" y="2.54" size="1.27" layer="91">This is an SCR
 Im Lazy</text>
+<text x="154.94" y="-2.54" size="1.778" layer="91">This is the ground for this circuit</text>
+<text x="142.24" y="-2.54" size="1.778" layer="91">Vgs 
+Protection
+Zener</text>
+<text x="101.6" y="-2.54" size="1.778" layer="91">Overvoltage
+indicator</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="/1" x="12.7" y="-20.32"/>
@@ -24955,11 +24966,11 @@ Im Lazy</text>
 <instance part="U$9" gate="G$1" x="114.3" y="231.14"/>
 <instance part="ZVP4525E6TA_1" gate="G$1" x="48.26" y="7.62" rot="R270"/>
 <instance part="LED1" gate="G$1" x="63.5" y="0"/>
-<instance part="PSMN1R4-40TLDX1" gate="G$1" x="111.76" y="-7.62" rot="MR270"/>
-<instance part="1N5356BRLG_1" gate="G$1" x="119.38" y="-5.08" rot="R90"/>
+<instance part="PSMN1R4-40TLDX1" gate="G$1" x="124.46" y="-7.62" rot="MR270"/>
+<instance part="1N5356BRLG_1" gate="G$1" x="139.7" y="-5.08" rot="R90"/>
 <instance part="LED2" gate="G$1" x="73.66" y="12.7" rot="R180"/>
-<instance part="R20" gate="G$1" x="119.38" y="10.16" rot="R90"/>
-<instance part="GND11" gate="1" x="134.62" y="-7.62" rot="R90"/>
+<instance part="R20" gate="G$1" x="139.7" y="10.16" rot="R90"/>
+<instance part="GND11" gate="1" x="167.64" y="-7.62" rot="R90"/>
 <instance part="R10" gate="G$1" x="81.28" y="5.08" rot="R270"/>
 <instance part="JP1" gate="G$1" x="317.5" y="33.02" rot="R90"/>
 <instance part="JP2" gate="G$1" x="302.26" y="33.02" rot="R90"/>
@@ -24970,12 +24981,17 @@ Im Lazy</text>
 <instance part="U$10" gate="G$1" x="307.34" y="12.7"/>
 <instance part="AL5809-20S1-7_1" gate="G$1" x="73.66" y="2.54" rot="R90"/>
 <instance part="AL5809-20S1-7_2" gate="G$1" x="58.42" y="7.62"/>
-<instance part="1N5356BRLG_2" gate="G$1" x="86.36" y="15.24" rot="R90"/>
-<instance part="BT152B-400R" gate="G$1" x="109.22" y="7.62" rot="MR90"/>
-<instance part="AL5809-20S1-7_4" gate="G$1" x="96.52" y="12.7"/>
-<instance part="AL5809-20S1-7_5" gate="G$1" x="96.52" y="5.08"/>
+<instance part="1N5354BRLG" gate="G$1" x="86.36" y="15.24" rot="R90"/>
+<instance part="BT152B-400R" gate="G$1" x="124.46" y="7.62" rot="MR90"/>
+<instance part="AL5809-20S1-7_4" gate="G$1" x="93.98" y="12.7"/>
+<instance part="AL5809-20S1-7_5" gate="G$1" x="93.98" y="5.08"/>
 <instance part="C35" gate="G$1" x="93.98" y="-2.54"/>
 <instance part="R4" gate="G$1" x="86.36" y="-5.08" rot="R90"/>
+<instance part="PSMN1R4-40TLDX2" gate="G$1" x="132.08" y="-22.86" rot="MR270"/>
+<instance part="LED3" gate="G$1" x="101.6" y="12.7" rot="R90"/>
+<instance part="LED4" gate="G$1" x="101.6" y="5.08" rot="R90"/>
+<instance part="MLZ2012DR10DT001" gate="G$1" x="114.3" y="12.7" rot="R90"/>
+<instance part="MLZ2012DR10DT002" gate="G$1" x="114.3" y="5.08" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -25051,11 +25067,11 @@ Im Lazy</text>
 <wire x1="63.5" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="20.32" x2="114.3" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="20.32" x2="114.3" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="20.32" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="20.32" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R20" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="20.32" x2="119.38" y2="15.24" width="0.1524" layer="91"/>
-<junction x="119.38" y="20.32"/>
+<wire x1="139.7" y1="20.32" x2="139.7" y2="15.24" width="0.1524" layer="91"/>
+<junction x="139.7" y="20.32"/>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <wire x1="73.66" y1="20.32" x2="73.66" y2="17.78" width="0.1524" layer="91"/>
 <junction x="73.66" y="20.32"/>
@@ -25066,12 +25082,13 @@ Im Lazy</text>
 <junction x="81.28" y="20.32"/>
 <wire x1="86.36" y1="20.32" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
 <junction x="86.36" y="20.32"/>
-<pinref part="1N5356BRLG_2" gate="G$1" pin="C"/>
+<pinref part="1N5354BRLG" gate="G$1" pin="C"/>
 <pinref part="BT152B-400R" gate="G$1" pin="D"/>
-<wire x1="114.3" y1="10.16" x2="114.3" y2="20.32" width="0.1524" layer="91"/>
-<junction x="114.3" y="20.32"/>
-<wire x1="114.3" y1="20.32" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
-<label x="119.38" y="20.32" size="1.778" layer="95"/>
+<wire x1="129.54" y1="10.16" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
+<junction x="129.54" y="20.32"/>
+<wire x1="129.54" y1="20.32" x2="139.7" y2="20.32" width="0.1524" layer="91"/>
+<label x="157.48" y="22.86" size="1.778" layer="95"/>
+<wire x1="139.7" y1="20.32" x2="167.64" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="OUTPUT_12REG" class="0">
@@ -25454,9 +25471,12 @@ Im Lazy</text>
 <pinref part="GND11" gate="1" pin="GND"/>
 <pinref part="PSMN1R4-40TLDX1" gate="G$1" pin="S"/>
 <pinref part="1N5356BRLG_1" gate="G$1" pin="A"/>
-<wire x1="119.38" y1="-7.62" x2="132.08" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="119.38" y="-7.62"/>
-<wire x1="119.38" y1="-7.62" x2="116.84" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="-7.62" x2="165.1" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="139.7" y="-7.62"/>
+<wire x1="139.7" y1="-7.62" x2="129.54" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="PSMN1R4-40TLDX2" gate="G$1" pin="S"/>
+<wire x1="137.16" y1="-22.86" x2="139.7" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="-22.86" x2="139.7" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="3"/>
@@ -26056,19 +26076,24 @@ Im Lazy</text>
 <wire x1="63.5" y1="-10.16" x2="81.28" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="-10.16" x2="86.36" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="-10.16" x2="93.98" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-10.16" x2="106.68" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="-10.16" x2="106.68" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="-10.16" x2="99.06" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="-10.16" x2="116.84" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-10.16" x2="119.38" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="0" x2="81.28" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="81.28" y="-10.16"/>
 <pinref part="BT152B-400R" gate="G$1" pin="G"/>
-<wire x1="106.68" y1="5.08" x2="106.68" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="106.68" y="-10.16"/>
+<wire x1="121.92" y1="5.08" x2="116.84" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="116.84" y="-10.16"/>
 <pinref part="C35" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="-7.62" x2="93.98" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="93.98" y="-10.16"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <junction x="86.36" y="-10.16"/>
+<pinref part="PSMN1R4-40TLDX2" gate="G$1" pin="D"/>
+<wire x1="127" y1="-22.86" x2="99.06" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="-22.86" x2="99.06" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="99.06" y="-10.16"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -26179,16 +26204,20 @@ Im Lazy</text>
 <segment>
 <pinref part="R20" gate="G$1" pin="1"/>
 <pinref part="1N5356BRLG_1" gate="G$1" pin="C"/>
-<wire x1="119.38" y1="5.08" x2="119.38" y2="0" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="5.08" x2="139.7" y2="0" width="0.1524" layer="91"/>
 <pinref part="PSMN1R4-40TLDX1" gate="G$1" pin="G"/>
-<wire x1="119.38" y1="0" x2="119.38" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="0" x2="111.76" y2="0" width="0.1524" layer="91"/>
-<junction x="119.38" y="0"/>
+<wire x1="139.7" y1="0" x2="139.7" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="0" x2="132.08" y2="0" width="0.1524" layer="91"/>
+<junction x="139.7" y="0"/>
+<pinref part="PSMN1R4-40TLDX2" gate="G$1" pin="G"/>
+<wire x1="132.08" y1="0" x2="124.46" y2="0" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="-15.24" x2="132.08" y2="0" width="0.1524" layer="91"/>
+<junction x="132.08" y="0"/>
 </segment>
 </net>
 <net name="N$29" class="0">
 <segment>
-<pinref part="1N5356BRLG_2" gate="G$1" pin="A"/>
+<pinref part="1N5354BRLG" gate="G$1" pin="A"/>
 <wire x1="86.36" y1="12.7" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="10.16" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="7.62" x2="86.36" y2="2.54" width="0.1524" layer="91"/>
@@ -26198,27 +26227,48 @@ Im Lazy</text>
 <wire x1="91.44" y1="2.54" x2="93.98" y2="0" width="0.1524" layer="91"/>
 <junction x="86.36" y="2.54"/>
 <pinref part="AL5809-20S1-7_4" gate="G$1" pin="A"/>
-<wire x1="93.98" y1="12.7" x2="88.9" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="12.7" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="12.7" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <junction x="86.36" y="10.16"/>
 <pinref part="AL5809-20S1-7_5" gate="G$1" pin="A"/>
-<wire x1="93.98" y1="5.08" x2="88.9" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="5.08" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="5.08" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
 <junction x="86.36" y="7.62"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$30" class="0">
+<net name="N$28" class="0">
 <segment>
 <pinref part="AL5809-20S1-7_4" gate="G$1" pin="C"/>
-<pinref part="BT152B-400R" gate="G$1" pin="S"/>
-<wire x1="99.06" y1="12.7" x2="101.6" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="12.7" x2="104.14" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
+<wire x1="99.06" y1="12.7" x2="96.52" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
 <pinref part="AL5809-20S1-7_5" gate="G$1" pin="C"/>
-<wire x1="99.06" y1="5.08" x2="101.6" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="5.08" x2="104.14" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="7.62" x2="104.14" y2="10.16" width="0.1524" layer="91"/>
-<junction x="104.14" y="10.16"/>
+<pinref part="LED4" gate="G$1" pin="A"/>
+<wire x1="99.06" y1="5.08" x2="96.52" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="MLZ2012DR10DT001" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="LED4" gate="G$1" pin="C"/>
+<pinref part="MLZ2012DR10DT002" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="MLZ2012DR10DT001" gate="G$1" pin="2"/>
+<pinref part="BT152B-400R" gate="G$1" pin="S"/>
+<wire x1="119.38" y1="12.7" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="MLZ2012DR10DT002" gate="G$1" pin="2"/>
+<wire x1="119.38" y1="5.08" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
+<junction x="119.38" y="10.16"/>
 </segment>
 </net>
 </nets>
