@@ -28031,60 +28031,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="UPJ1V220MDD1TD">
-<packages>
-<package name="U1-E">
-<pad name="1" x="-2.0066" y="0" drill="0.7112" diameter="1.2192" shape="square"/>
-<pad name="2" x="0" y="0" drill="0.7112" diameter="1.2192" rot="R180"/>
-<wire x1="-5.0292" y1="0" x2="-3.7592" y2="0" width="0.1524" layer="21"/>
-<wire x1="-4.3942" y1="0.635" x2="-4.3942" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.6256" y1="0" x2="-3.6322" y2="0" width="0.1524" layer="21" curve="-180"/>
-<wire x1="-3.6322" y1="0" x2="1.6256" y2="0" width="0.1524" layer="21" curve="-180"/>
-<wire x1="-5.0292" y1="0" x2="-3.7592" y2="0" width="0.1524" layer="51"/>
-<wire x1="-4.3942" y1="0.635" x2="-4.3942" y2="-0.635" width="0.1524" layer="51"/>
-<wire x1="1.4986" y1="0" x2="-3.5052" y2="0" width="0" layer="51" curve="-180"/>
-<wire x1="-3.5052" y1="0" x2="1.4986" y2="0" width="0" layer="51" curve="-180"/>
-<text x="-4.2672" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-</package>
-</packages>
-<symbols>
-<symbol name="CAPH">
-<pin name="22" x="7.62" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="11" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<wire x1="3.4798" y1="-1.905" x2="3.4798" y2="0" width="0.2032" layer="94"/>
-<wire x1="3.4798" y1="0" x2="3.4798" y2="1.905" width="0.2032" layer="94"/>
-<wire x1="4.1148" y1="-1.905" x2="4.1148" y2="0" width="0.2032" layer="94"/>
-<wire x1="4.1148" y1="0" x2="4.1148" y2="1.905" width="0.2032" layer="94"/>
-<wire x1="4.1148" y1="0" x2="5.08" y2="0" width="0.2032" layer="94"/>
-<wire x1="2.54" y1="0" x2="3.4798" y2="0" width="0.2032" layer="94"/>
-<text x="-5.1562" y="-5.5372" size="3.4798" layer="96" ratio="10" rot="SR0">&gt;Value</text>
-<text x="-4.0894" y="2.0828" size="3.4798" layer="95" ratio="10" rot="SR0">&gt;Name</text>
-<wire x1="2.286" y1="1.524" x2="2.286" y2="0.508" width="0.254" layer="94"/>
-<wire x1="1.778" y1="1.016" x2="2.794" y2="1.016" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="UPJ1V220MDD1TD" prefix="C">
-<gates>
-<gate name="A" symbol="CAPH" x="0" y="0" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="U1-E">
-<connects>
-<connect gate="A" pin="11" pad="1"/>
-<connect gate="A" pin="22" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="UPJ1V220MDD1TD" constant="no"/>
-<attribute name="VENDOR" value="Nichicon" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -28228,8 +28174,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C3" library="rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="2.2uF"/>
-<part name="C24" library="UPJ1V220MDD1TD" deviceset="UPJ1V220MDD1TD" device=""/>
-<part name="C25" library="UPJ1V220MDD1TD" deviceset="UPJ1V220MDD1TD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -28458,8 +28402,6 @@ indicator</text>
 <instance part="C3" gate="G$1" x="147.32" y="228.6"/>
 <instance part="C11" gate="G$1" x="154.94" y="228.6"/>
 <instance part="C7" gate="G$1" x="60.96" y="78.74"/>
-<instance part="C24" gate="A" x="228.6" y="91.44" rot="R270"/>
-<instance part="C25" gate="A" x="322.58" y="78.74" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -28818,7 +28760,6 @@ indicator</text>
 <segment>
 <wire x1="322.58" y1="78.74" x2="322.58" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND33" gate="1" pin="GND"/>
-<pinref part="C25" gate="A" pin="11"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="1" pin="4"/>
@@ -29394,7 +29335,6 @@ indicator</text>
 <pinref part="U$8" gate="G$1" pin="CAP-"/>
 <wire x1="256.54" y1="83.82" x2="256.54" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="83.82" x2="256.54" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="C24" gate="A" pin="22"/>
 </segment>
 </net>
 <net name="OUTPUT_12NEG" class="0">
@@ -29402,12 +29342,9 @@ indicator</text>
 <pinref part="U$8" gate="G$1" pin="VOUT"/>
 <wire x1="312.42" y1="86.36" x2="314.96" y2="86.36" width="0.1524" layer="91"/>
 <label x="312.42" y="86.36" size="1.778" layer="95"/>
-<wire x1="314.96" y1="86.36" x2="322.58" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="86.36" x2="330.2" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="C23" gate="G$1" pin="1"/>
 <junction x="314.96" y="86.36"/>
-<pinref part="C25" gate="A" pin="22"/>
-<wire x1="322.58" y1="86.36" x2="330.2" y2="86.36" width="0.1524" layer="91"/>
-<junction x="322.58" y="86.36"/>
 </segment>
 <segment>
 <pinref part="OPA348AQDRQ1_1" gate="G$1" pin="V-"/>
@@ -29424,7 +29361,6 @@ indicator</text>
 <segment>
 <pinref part="U$8" gate="G$1" pin="CAP+"/>
 <wire x1="228.6" y1="91.44" x2="256.54" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="C24" gate="A" pin="11"/>
 </segment>
 </net>
 <net name="N$1" class="0">
