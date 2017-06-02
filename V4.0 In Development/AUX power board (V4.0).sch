@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.1">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -28484,8 +28484,7 @@ indicator</text>
 <wire x1="45.72" y1="12.7" x2="63.5" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="20.32" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="20.32" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="20.32" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R20" gate="G$1" pin="2"/>
 <wire x1="139.7" y1="20.32" x2="139.7" y2="15.24" width="0.1524" layer="91"/>
@@ -28498,9 +28497,6 @@ indicator</text>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="10.16" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 <junction x="81.28" y="20.32"/>
-<wire x1="86.36" y1="20.32" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
-<junction x="86.36" y="20.32"/>
-<pinref part="1N5354BRLG" gate="G$1" pin="C"/>
 <pinref part="BT152B-400R" gate="G$1" pin="D"/>
 <wire x1="129.54" y1="10.16" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
 <junction x="129.54" y="20.32"/>
@@ -29051,7 +29047,15 @@ indicator</text>
 <pinref part="ZVP4525E6TA_1" gate="G$1" pin="S"/>
 <wire x1="38.1" y1="7.62" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="FUSE" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="20.32" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
+<junction x="50.8" y="20.32"/>
+<wire x1="50.8" y1="30.48" x2="88.9" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="30.48" x2="88.9" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="1N5354BRLG" gate="G$1" pin="C"/>
+<wire x1="88.9" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="22.86" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FUSED_BATTERY_IN+" class="0">
