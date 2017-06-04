@@ -28230,6 +28230,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="2.2uF"/>
 <part name="C24" library="UPJ1V220MDD1TD" deviceset="UPJ1V220MDD1TD" device=""/>
 <part name="C25" library="UPJ1V220MDD1TD" deviceset="UPJ1V220MDD1TD" device=""/>
+<part name="R12" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -28460,6 +28461,7 @@ indicator</text>
 <instance part="C7" gate="G$1" x="60.96" y="78.74"/>
 <instance part="C24" gate="A" x="228.6" y="91.44" rot="R270"/>
 <instance part="C25" gate="A" x="322.58" y="78.74" rot="R90"/>
+<instance part="R12" gate="G$1" x="119.38" y="0" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -29532,14 +29534,11 @@ indicator</text>
 <wire x1="81.28" y1="-10.16" x2="86.36" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="-10.16" x2="93.98" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="-10.16" x2="99.06" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="-10.16" x2="116.84" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-10.16" x2="119.38" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="-10.16" x2="104.14" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-7.62" x2="119.38" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="0" x2="81.28" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="81.28" y="-10.16"/>
-<pinref part="BT152B-400R" gate="G$1" pin="G"/>
-<wire x1="121.92" y1="5.08" x2="116.84" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="116.84" y="-10.16"/>
 <pinref part="C35" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="-7.62" x2="93.98" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="93.98" y="-10.16"/>
@@ -29552,6 +29551,9 @@ indicator</text>
 <pinref part="AL5809-20S1-7_1" gate="G$1" pin="A"/>
 <wire x1="73.66" y1="0" x2="73.66" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="73.66" y="-10.16"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="-5.08" x2="119.38" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="119.38" y="-7.62"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -29727,6 +29729,8 @@ indicator</text>
 <pinref part="MLZ2012DR10DT002" gate="G$1" pin="2"/>
 <wire x1="119.38" y1="5.08" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
 <junction x="119.38" y="10.16"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<junction x="119.38" y="5.08"/>
 </segment>
 </net>
 <net name="N$34" class="0">
