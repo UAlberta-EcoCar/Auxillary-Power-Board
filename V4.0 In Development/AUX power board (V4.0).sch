@@ -28360,7 +28360,7 @@ indicator</text>
 <instance part="C13" gate="G$1" x="162.56" y="228.6"/>
 <instance part="C14" gate="G$1" x="170.18" y="228.6"/>
 <instance part="C15" gate="G$1" x="129.54" y="228.6"/>
-<instance part="GND1" gate="1" x="160.02" y="218.44"/>
+<instance part="GND1" gate="1" x="160.02" y="215.9"/>
 <instance part="GND2" gate="1" x="99.06" y="231.14" rot="R270"/>
 <instance part="SL54-TP" gate="G$1" x="142.24" y="231.14" rot="R90"/>
 <instance part="GND3" gate="1" x="132.08" y="200.66" rot="R90"/>
@@ -28718,7 +28718,7 @@ indicator</text>
 <wire x1="160.02" y1="223.52" x2="162.56" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="223.52" x2="162.56" y2="223.52" width="0.1524" layer="91"/>
 <junction x="162.56" y="223.52"/>
-<wire x1="160.02" y1="223.52" x2="160.02" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="223.52" x2="160.02" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="223.52" x2="160.02" y2="223.52" width="0.1524" layer="91"/>
