@@ -28678,16 +28678,6 @@ indicator</text>
 <pinref part="POWERHEADER" gate="A" pin="4"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="SH1"/>
-<wire x1="228.6" y1="-5.08" x2="226.06" y2="-5.08" width="0.1524" layer="91"/>
-<label x="220.98" y="-5.08" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="SH2"/>
-<wire x1="228.6" y1="-10.16" x2="226.06" y2="-10.16" width="0.1524" layer="91"/>
-<label x="220.98" y="-10.16" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="ISP1" gate="G$1" pin="GND"/>
 <wire x1="358.14" y1="12.7" x2="363.22" y2="12.7" width="0.1524" layer="91"/>
 <label x="358.14" y="12.7" size="1.778" layer="95"/>
@@ -28962,16 +28952,6 @@ indicator</text>
 <label x="220.98" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="SH1"/>
-<wire x1="264.16" y1="-5.08" x2="261.62" y2="-5.08" width="0.1524" layer="91"/>
-<label x="256.54" y="-5.08" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$4" gate="G$1" pin="SH2"/>
-<wire x1="264.16" y1="-10.16" x2="261.62" y2="-10.16" width="0.1524" layer="91"/>
-<label x="256.54" y="-10.16" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="264.16" y1="25.4" x2="261.62" y2="25.4" width="0.1524" layer="91"/>
 <label x="256.54" y="25.4" size="1.778" layer="95"/>
 </segment>
@@ -28979,16 +28959,6 @@ indicator</text>
 <pinref part="U$4" gate="G$1" pin="6"/>
 <wire x1="264.16" y1="0" x2="261.62" y2="0" width="0.1524" layer="91"/>
 <label x="256.54" y="0" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$10" gate="G$1" pin="SH1"/>
-<wire x1="299.72" y1="-5.08" x2="297.18" y2="-5.08" width="0.1524" layer="91"/>
-<label x="292.1" y="-5.08" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$10" gate="G$1" pin="SH2"/>
-<wire x1="299.72" y1="-10.16" x2="297.18" y2="-10.16" width="0.1524" layer="91"/>
-<label x="292.1" y="-10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="299.72" y1="25.4" x2="297.18" y2="25.4" width="0.1524" layer="91"/>
@@ -29565,6 +29535,36 @@ indicator</text>
 <label x="35.56" y="-12.7" size="1.778" layer="95"/>
 <label x="119.38" y="-7.62" size="1.778" layer="95"/>
 <label x="81.28" y="-12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="SH1"/>
+<wire x1="228.6" y1="-5.08" x2="226.06" y2="-5.08" width="0.1524" layer="91"/>
+<label x="220.98" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="SH2"/>
+<wire x1="228.6" y1="-10.16" x2="226.06" y2="-10.16" width="0.1524" layer="91"/>
+<label x="220.98" y="-10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="SH1"/>
+<wire x1="264.16" y1="-5.08" x2="261.62" y2="-5.08" width="0.1524" layer="91"/>
+<label x="256.54" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="SH2"/>
+<wire x1="264.16" y1="-10.16" x2="261.62" y2="-10.16" width="0.1524" layer="91"/>
+<label x="256.54" y="-10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="SH1"/>
+<wire x1="299.72" y1="-5.08" x2="297.18" y2="-5.08" width="0.1524" layer="91"/>
+<label x="292.1" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="SH2"/>
+<wire x1="299.72" y1="-10.16" x2="297.18" y2="-10.16" width="0.1524" layer="91"/>
+<label x="292.1" y="-10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$25" class="0">
