@@ -147,6 +147,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -268,6 +270,44 @@
 <pad name="P$1" x="0" y="12.1" drill="0.84"/>
 <pad name="P$2" x="0" y="-12.1" drill="0.84"/>
 </package>
+<package name="CAP-5MM*2MM">
+<pad name="P$1" x="-1" y="0" drill="0.6"/>
+<pad name="P$2" x="1" y="0" drill="0.6"/>
+<circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
+<wire x1="0" y1="2.5" x2="0" y2="-2.5" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="0" y="2.5" curve="-90"/>
+<vertex x="2.5" y="0" curve="-90"/>
+<vertex x="0" y="-2.5"/>
+</polygon>
+</package>
+<package name="OMRON_G5LE-1">
+<wire x1="-11.25" y1="8.25" x2="11.25" y2="8.25" width="0.1524" layer="21"/>
+<wire x1="-11.25" y1="-8.25" x2="11.25" y2="-8.25" width="0.1524" layer="21"/>
+<wire x1="-11.25" y1="8.25" x2="-11.25" y2="-8.25" width="0.1524" layer="21"/>
+<wire x1="11.25" y1="8.25" x2="11.25" y2="-8.25" width="0.1524" layer="21"/>
+<pad name="2" x="-6.7" y="6" drill="1.5"/>
+<pad name="3" x="5.5" y="6" drill="1.5"/>
+<pad name="1" x="-8.7" y="0" drill="1.5"/>
+<pad name="5" x="-6.7" y="-6" drill="1.5"/>
+<pad name="4" x="5.5" y="-6" drill="1.5"/>
+</package>
+<package name="AXIAL-0.3">
+<description>&lt;h3&gt;AXIAL-0.3&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.&lt;/p&gt;</description>
+<wire x1="-2.54" y1="0.762" x2="2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="-2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.794" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.794" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-3.81" y="0" drill="0.9" diameter="1.8796"/>
+<pad name="P$2" x="3.81" y="0" drill="0.9" diameter="1.8796"/>
+<text x="0" y="1.016" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.016" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LT4365">
@@ -341,6 +381,33 @@
 <pin name="GND4" x="15.24" y="-2.54" length="middle" rot="R180"/>
 <pin name="INHIBIT" x="15.24" y="-7.62" length="middle" rot="R180"/>
 <text x="-10.16" y="15.24" size="1.778" layer="95">L4931CD120-TR</text>
+</symbol>
+<symbol name="VCF4-1000">
+<wire x1="5.08" y1="-5.08" x2="27.94" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-5.08" x2="27.94" y2="15.24" width="0.254" layer="94"/>
+<wire x1="27.94" y1="15.24" x2="5.08" y2="15.24" width="0.254" layer="94"/>
+<wire x1="5.08" y1="15.24" x2="-5.08" y2="15.24" width="0.254" layer="94"/>
+<wire x1="5.08" y1="15.24" x2="5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="5.08" y1="8.89" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="3.81" y2="3.81" width="0.254" layer="94"/>
+<wire x1="3.81" y1="3.81" x2="3.81" y2="2.54" width="0.254" layer="94" curve="306.869898"/>
+<wire x1="3.81" y1="2.54" x2="2.54" y2="6.35" width="0.254" layer="94" curve="90"/>
+<wire x1="2.54" y1="6.35" x2="2.54" y2="3.81" width="0.254" layer="94" curve="233.130102"/>
+<wire x1="2.54" y1="3.81" x2="2.54" y2="7.62" width="0.254" layer="94" curve="126.870198"/>
+<wire x1="2.54" y1="7.62" x2="2.54" y2="5.08" width="0.254" layer="94" curve="233.129877"/>
+<wire x1="2.54" y1="5.08" x2="5.08" y2="8.89" width="0.254" layer="94" curve="59.490008"/>
+<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="5.08" width="0.254" layer="94"/>
+<wire x1="12.7" y1="5.08" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="5.08" x2="15.24" y2="5.08" width="0.254" layer="94"/>
+<wire x1="15.24" y1="5.08" x2="20.32" y2="10.16" width="0.254" layer="94"/>
+<pin name="30" x="15.24" y="20.32" length="middle" rot="R270"/>
+<pin name="85" x="0" y="-10.16" length="middle" rot="R90"/>
+<pin name="86" x="0" y="20.32" length="middle" rot="R270"/>
+<pin name="87" x="33.02" y="0" length="middle" rot="R180"/>
+<pin name="87A" x="33.02" y="10.16" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -464,6 +531,57 @@
 </gates>
 <devices>
 <device name="" package="1W_RESISTOR">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CAP-5MM*2MM">
+<gates>
+<gate name="G$1" symbol="CAP_POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CAP-5MM*2MM">
+<connects>
+<connect gate="G$1" pin="+" pad="P$1"/>
+<connect gate="G$1" pin="-" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OMRON_G5LE-1">
+<gates>
+<gate name="G$1" symbol="VCF4-1000" x="-12.7" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="OMRON_G5LE-1">
+<connects>
+<connect gate="G$1" pin="30" pad="1"/>
+<connect gate="G$1" pin="85" pad="2"/>
+<connect gate="G$1" pin="86" pad="5"/>
+<connect gate="G$1" pin="87" pad="3"/>
+<connect gate="G$1" pin="87A" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="0.250W_RES">
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="AXIAL-0.3">
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
